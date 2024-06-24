@@ -1,0 +1,35 @@
+<html>
+    <title>Tutorial</title>
+    <body>
+        <canvas height="600px" width="600px"></canvas>
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.lineWidth = 5;
+            context.beginPath();
+            context.rect(100,100,400,400);
+            context.stroke();
+
+            context.beginPath();
+            context.arc(300,300,100,0,Math.PI*2);
+            context.stroke()
+
+            context.beginPath();
+            context.arc(100,100,50,0,Math.PI*2);
+            context.stroke()
+
+            context.beginPath();
+            context.arc(100,500,50,0,Math.PI*2);
+            context.stroke();
+
+            context.beginPath();
+            context.arc(500,100,50,0,Math.PI*2);
+            context.stroke()
+
+            context.beginPath();
+            context.arc(500,500,50,0,Math.PI*2);
+            context.stroke();
+        </script>
+    </body>
+</html>
