@@ -1,0 +1,42 @@
+<html>
+    <title>Tutorial 2</title>
+    <body>
+        <canvas height="600px" width="600px"></canvas>
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            let x = 100;
+            let y = 100;
+            let height = 50;
+            let width = 50;
+            let gap = 10;
+            context.lineWidth = 2;
+
+
+            
+            for(let i = 0;i<5;i++){
+                for(let j = 0;j<5;j++){
+                    let X = x+(width+gap)*i
+                    let Y = y+(height+gap)*j
+                    context.beginPath();
+                    context.rect(X,Y,height,width);
+                    context.stroke()
+
+                    if(Math.random()>0.5){
+                        context.beginPath()
+                        context.rect(X+5,Y+5,40,40)
+                        context.stroke()
+                    }
+                    
+                }
+            }
+
+            let array = ['roshan','muhammed','r']
+            array.forEach(ele=>{
+                console.log(ele);
+            })
+
+        </script>
+    </body>
+</html>
